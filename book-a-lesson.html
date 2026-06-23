@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Hindi Lesson | Sheila's Hindi Classes</title>
+  <meta name="description" content="Book a private Hindi lesson in Wellington with Anuradha Gupta. Flexible scheduling, all levels welcome. Complete beginners encouraged to apply.">
+  <link rel="icon" type="image/png" href="assets/sheila-hindi-class-logo-nb.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css?v=1.0">
+</head>
+<body data-page="Book a Lesson">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="nav-placeholder"></div>
+  <div class="page-hero"><div class="container"><h1>Book a Lesson</h1><p>Ready to begin your Hindi journey? Fill in the form below and Anuradha will be in touch to arrange your first lesson.</p></div></div>
+  <main id="main-content">
+    <div class="container breadcrumb-container"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">&rsaquo;</span><span aria-current="page">Book a Lesson</span></nav></div>
+    <section class="section section-cream" aria-labelledby="booking-form-heading"><div class="container booking-form-container">
+      <h2 id="booking-form-heading" class="heading-lg text-center home-heading-tight">Your Lesson Enquiry</h2>
+      <p class="body-sm text-center reviews-note">Fields marked <span aria-hidden="true">*</span> are required.</p>
+      <form id="booking-form" name="booking-form" method="post" action="/thank-you.html" aria-label="Lesson Booking Enquiry Form" novalidate data-netlify="true" data-netlify-honeypot="bot-field" class="booking-form-card">
+        <!-- Netlify form name (helps detection) -->
+        <input type="hidden" name="form-name" value="booking-form">
+        <!-- Bots will fill this out, humans won't see it -->
+        <p style="display:none;">
+          <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+        </p>
+        <div class="form-group"><label for="booking-name">Full Name <span aria-hidden="true">*</span></label><input type="text" id="booking-name" name="full_name" class="form-input" placeholder="e.g. Jane Smith" autocomplete="name" aria-required="true" aria-describedby="booking-name-error"><span id="booking-name-error" class="field-error" role="alert" aria-live="polite" hidden></span></div>
+        <div class="form-group"><label for="booking-email">Email Address <span aria-hidden="true">*</span></label><input type="email" id="booking-email" name="email" class="form-input" placeholder="e.g. jane@example.com" autocomplete="email" aria-required="true" aria-describedby="booking-email-error"><span id="booking-email-error" class="field-error" role="alert" aria-live="polite" hidden></span></div>
+        <div class="form-group"><label for="booking-phone">Phone Number <span class="body-sm">(optional)</span></label><input type="tel" id="booking-phone" name="phone" class="form-input" placeholder="e.g. 021 123 4567" autocomplete="tel" aria-describedby="booking-phone-error"><span id="booking-phone-error" class="field-error" role="alert" aria-live="polite" hidden></span></div>
+        <div class="form-group"><label for="booking-level">Your Current Hindi Level <span aria-hidden="true">*</span></label><select id="booking-level" name="hindi_level" class="form-select" aria-required="true" aria-describedby="booking-level-error"><option value="">Please select&hellip;</option><option value="beginner">Complete Beginner</option><option value="some-basics">I know a little</option><option value="intermediate">Intermediate</option><option value="advanced">Advanced</option></select><span id="booking-level-error" class="field-error" role="alert" aria-live="polite" hidden></span></div>
+        <fieldset class="booking-fieldset">
+          <legend class="booking-legend">Why do you want to learn Hindi? <span aria-hidden="true">*</span> <span class="booking-legend-note">(select all that apply)</span></legend>
+          <div id="booking-reason-error" class="field-error booking-reason-error" role="alert" aria-live="polite" hidden></div>
+          <div class="checkbox-list">
+            <label class="checkbox-option"><input type="checkbox" name="reason" value="travel" class="form-checkbox"> &#9992;&#65039; Travel to India</label>
+            <label class="checkbox-option"><input type="checkbox" name="reason" value="family" class="form-checkbox"> &#128106; Family &amp; Cultural Connections</label>
+            <label class="checkbox-option"><input type="checkbox" name="reason" value="yoga" class="form-checkbox"> &#129408; Yoga &amp; Spirituality</label>
+            <label class="checkbox-option"><input type="checkbox" name="reason" value="professional" class="form-checkbox"> &#128188; Professional / Work</label>
+            <label class="checkbox-option"><input type="checkbox" name="reason" value="bollywood" class="form-checkbox"> &#127902;&#65039; Bollywood &amp; Entertainment</label>
+            <label class="checkbox-option"><input type="checkbox" name="reason" value="study" class="form-checkbox"> &#128218; Study or Community Work</label>
+            <label class="checkbox-option"><input type="checkbox" name="reason" value="other" class="form-checkbox"> Other</label>
+          </div>
+        </fieldset>
+        <div class="form-group"><label for="booking-time">Preferred time for lessons <span class="body-sm">(optional)</span></label><select id="booking-time" name="preferred_time" class="form-select"><option value="">No preference</option><option value="morning">Morning</option><option value="afternoon">Afternoon</option><option value="evening">Evening</option><option value="weekends">Weekends</option></select></div>
+        <div class="form-group"><label for="booking-message">Anything else you'd like to share? <span class="body-sm">(optional)</span></label><textarea id="booking-message" name="additional_message" class="form-textarea" placeholder="Feel free to tell Anuradha anything that would help her prepare for your first lesson." maxlength="1000" aria-describedby="booking-message-error"></textarea><span id="booking-message-error" class="field-error" role="alert" aria-live="polite" hidden></span></div>
+        <div class="form-group"><label class="privacy-option"><input type="checkbox" id="booking-privacy" name="privacy" aria-required="true" aria-describedby="booking-privacy-error privacy-notice-booking" class="form-checkbox privacy-checkbox"><span id="privacy-notice-booking" class="privacy-notice">I agree that Sheila's Hindi Classes may collect and use the information I provide in this form to arrange a Hindi lesson. My information will not be shared with third parties unless required by law. I understand that I can request access to or correction of my information at any time by contacting Anuradha at <a href="mailto:hindiclass@xtra.co.nz">hindiclass@xtra.co.nz</a>. <span aria-hidden="true">*</span></span></label><span id="booking-privacy-error" class="field-error" role="alert" aria-live="polite" hidden></span></div>
+        <button type="submit" class="form-submit">Send My Enquiry</button>
+        <div id="booking-success" role="status" hidden class="form-success"><strong>Ng&#257; mihi</strong> &#8212; thank you for your lesson enquiry! Anuradha has received your request and will be in touch shortly to discuss your goals and arrange your first lesson. We look forward to beginning this journey with you.</div>
+      </form>
+    </div></section>
+    <section class="section" aria-labelledby="cta-book-heading"><div class="container"><div class="enroll-banner"><h2 id="cta-book-heading">Prefer to call or email?</h2><p>&#128222; <a href="tel:02102697038" class="cta-contact-link">021 026 97038</a> &nbsp;&middot;&nbsp; &#9993;&#65039; <a href="mailto:hindiclass@xtra.co.nz" class="cta-contact-link">hindiclass@xtra.co.nz</a></p><a href="contact.html" class="btn-white cta-contact-button">Contact Anuradha</a></div></div></section>
+  </main>
+  <div id="footer-placeholder"></div>
+  <script src="./shared.js?v=1.0" defer></script>
+</body>
+</html>
