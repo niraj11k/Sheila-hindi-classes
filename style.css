@@ -108,6 +108,13 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
 .nav-links a.active { color: var(--primary); }
 .nav-links a.active::after { width: 100%; }
 .nav-cta { flex-shrink: 0; }
+.navbar--scrolled { box-shadow: 0 4px 24px rgba(200,146,42,0.18); }
+
+.fade-up-initial { opacity: 0; transform: translateY(24px); }
+
+.fade-up-visible { opacity: 1; transform: translateY(0); transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
 .hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: var(--space-sm); border-radius: var(--radius-sm); }
 .hamburger span { display: block; width: 24px; height: 2px; background: var(--dark); border-radius: var(--radius-full); transition: all 0.3s; }
 .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }

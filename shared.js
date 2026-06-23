@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', function () {
     var navbar = document.querySelector('.navbar');
     if (navbar) {
-      navbar.style.boxShadow = window.scrollY > 50 ? '0 4px 24px rgba(200,146,42,0.18)' : '';
+      navbar.classList.toggle('navbar--scrolled', window.scrollY > 50);
     }
   }, { passive: true });
 
@@ -149,15 +149,13 @@ document.addEventListener('DOMContentLoaded', function () {
     var fadeEls = document.querySelectorAll('.animate-fadeUp');
     if ('IntersectionObserver' in window && fadeEls.length > 0) {
       fadeEls.forEach(function (el) {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(24px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        el.classList.add('fade-up-initial');
       });
       var observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.classList.remove('fade-up-initial');
+            entry.target.classList.add('fade-up-visible');
             observer.unobserve(entry.target);
           }
         });
