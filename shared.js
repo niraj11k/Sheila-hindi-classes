@@ -242,10 +242,31 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       if (!valid) { if (firstInvalid) firstInvalid.focus(); return; }
-      // Success — form endpoint to be connected by site owner (Netlify Forms or Formspree)
-      form.hidden = true;
-      successEl.hidden = false;
-      successEl.focus();
+      var submitAction = form.getAttribute('action') || window.location.pathname;
+      var formData = new FormData(form);
+      var formError = document.getElementById(formId + '-error');
+
+      fetch(submitAction, {
+        method: 'POST',
+        body: formData
+      })
+      .then(function (response) {
+        if (!response.ok) {
+          throw new Error('Form submission failed with status ' + response.status);
+        }
+        form.hidden = true;
+        successEl.hidden = false;
+        successEl.focus();
+      })
+      .catch(function (error) {
+        console.error('Netlify form submission error:', error);
+        if (formError) {
+          formError.textContent = 'Sorry, there was a problem sending your message. Please try again or email hindiclass@xtra.co.nz.';
+          formError.hidden = false;
+        } else {
+          alert('Sorry, there was a problem sending your message. Please try again or email hindiclass@xtra.co.nz.');
+        }
+      });
     });
   }
 

@@ -29,8 +29,8 @@
         <section aria-labelledby="contact-form-heading">
           <h2 id="contact-form-heading" class="heading-md">Send a message</h2>
           <p class="body-sm form-required-note">Fields marked <span aria-hidden="true">*</span> are required.</p>
-          <form id="contact-form" name="contact-form" method="post" aria-label="Contact Enquiry Form" novalidate data-netlify="true" data-netlify-honeypot="bot-field">
-            <!-- Netlify form name (helps detection) -->
+          <form id="contact-form" name="contact-form" method="post" aria-label="Contact Enquiry Form" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+            <!-- Netlify form name (helps detection) adding to check if code is being used -->
             <input type="hidden" name="form-name" value="contact-form">
             <!-- Bots will fill this out, humans won't see it -->
             <p hidden>
@@ -43,6 +43,7 @@
             <div class="form-group"><label class="privacy-option"><input type="checkbox" id="contact-privacy" name="privacy" aria-required="true" aria-describedby="contact-privacy-error privacy-notice-contact" class="form-checkbox privacy-checkbox"><span id="privacy-notice-contact" class="privacy-notice">I agree that Sheila's Hindi Classes may collect and use the information I provide in this form to respond to my enquiry. My information will not be shared with third parties unless required by law. I understand that I can request access to or correction of my information at any time by contacting Anuradha at <a href="mailto:hindiclass@xtra.co.nz">hindiclass@xtra.co.nz</a>. <span aria-hidden="true">*</span></span></label><span id="contact-privacy-error" class="field-error" role="alert" aria-live="polite" hidden></span></div>
             <button type="submit" class="form-submit">Send Message</button>
             <div id="contact-success" role="status" hidden class="form-success"><strong>Ng&#257; mihi</strong> &#8212; thank you for getting in touch! Your message has been received and Anuradha will reply as soon as possible. If you'd prefer a faster response, you're also welcome to call or text on <a href="tel:02102697038">021 026 97038</a>.</div>
+            <div id="contact-error" role="alert" hidden class="form-error">Sorry, there was a problem sending your message. Please try again or email <a href="mailto:hindiclass@xtra.co.nz">hindiclass@xtra.co.nz</a>.</div>
           </form>
         </section>
       </div>
