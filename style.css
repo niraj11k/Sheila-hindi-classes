@@ -170,13 +170,13 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
 .card-image-bg::before { content: ''; position: absolute; inset: 0; background-position: center; background-size: cover; background-repeat: no-repeat; opacity: 0.45; pointer-events: none; }
 .card-image-bg::after { content: ''; position: absolute; inset: 0; background: rgba(255,255,255,0.68); pointer-events: none; }
 .card-image-bg > * { position: relative; z-index: 1; }
-.travel-india-card::before { background-image: url('assets/PHOTO-2026-05-15-10-08-39.jpg'); }
-.family-culture-card::before { background-image: url('assets/doorga-pooja-decoration.JPG'); }
-.yoga-spirit-card::before { background-image: url('assets/durga-idol-sitting.JPG'); }
-.bollywood-card::before { background-image: url('assets/hindi-in-bollywood.png'); }
-.professional-card::before { background-image: url('assets/hindi-for-professionals.png'); }
-.study-community-card::before { background-image: url('assets/hindi-for-community-work.png'); }
-.kitchen-image-card::before { background-image: url('assets/sheila-indiankitchen-image.png'); }
+.travel-india-card::before { background-image: url('assets/images/PHOTO-2026-05-15-10-08-39.jpg'); }
+.family-culture-card::before { background-image: url('assets/images/doorga-pooja-decoration.JPG'); }
+.yoga-spirit-card::before { background-image: url('assets/images/durga-idol-sitting.JPG'); }
+.bollywood-card::before { background-image: url('assets/images/hindi-in-bollywood.png'); }
+.professional-card::before { background-image: url('assets/images/hindi-for-professionals.png'); }
+.study-community-card::before { background-image: url('assets/images/hindi-for-community-work.png'); }
+.kitchen-image-card::before { background-image: url('assets/images/sheila-indiankitchen-image.png'); }
 
 .btn-primary { display: inline-flex; align-items: center; gap: var(--space-sm); background: var(--primary); color: var(--white); border: none; border-radius: var(--radius-full); padding: 14px 32px; font-size: var(--size-base); font-weight: 800; font-family: var(--font-body); cursor: pointer; text-decoration: none; transition: background 0.2s, transform 0.15s, box-shadow 0.2s; box-shadow: 0 4px 16px rgba(200,146,42,0.35); letter-spacing: 0.02em; }
 .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,146,42,0.45); color: var(--white); text-decoration: none; }
@@ -278,6 +278,27 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
 .feature-list { list-style: none; margin: var(--space-md) 0 var(--space-lg); display: flex; flex-direction: column; gap: var(--space-sm); }
 .reasons-grid { margin-top: var(--size-2xl); }
 .reason-tag { margin-bottom: 12px; }
+.why-course-section { position: relative; overflow: hidden; }
+.why-course-section::before { content: 'Hindi'; position: absolute; right: max(24px, 6vw); top: 28px; color: rgba(200,146,42,0.08); font-size: clamp(4rem, 13vw, 10rem); font-weight: 900; line-height: 1; pointer-events: none; }
+.why-course-layout { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr); gap: clamp(28px, 5vw, 64px); align-items: center; position: relative; z-index: 1; }
+.why-course-copy { max-width: 680px; }
+.why-course-tag { margin-bottom: var(--space-md); }
+.why-course-copy .body-lg { margin-top: var(--space-lg); }
+.why-travel-callout { margin-top: var(--space-xl); padding: clamp(20px, 4vw, 32px); background: linear-gradient(135deg, var(--dark), #5d410c); border-radius: var(--radius-lg); box-shadow: var(--shadow-md); position: relative; overflow: hidden; }
+.why-travel-callout::after { content: ''; position: absolute; inset: auto -32px -46px auto; width: 150px; height: 150px; border-radius: var(--radius-full); border: 30px solid rgba(232,160,48,0.22); pointer-events: none; }
+.why-travel-callout p { color: rgba(255,255,255,0.86); font-size: var(--size-lg); margin-bottom: var(--space-sm); position: relative; z-index: 1; }
+.why-travel-callout p:last-child { margin-bottom: 0; }
+.why-callout-question { color: var(--secondary) !important; font-weight: 900; text-transform: uppercase; letter-spacing: 0.06em; font-size: var(--size-sm) !important; }
+.why-course-panel { background: var(--white); border: 2px solid var(--primary-light); border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); padding: clamp(22px, 4vw, 40px); position: relative; isolation: isolate; }
+.why-course-panel::before { content: ''; position: absolute; inset: 16px; border-radius: calc(var(--radius-lg) - 8px); border: 1px dashed rgba(200,146,42,0.38); z-index: -1; }
+.why-course-steps { list-style: none; display: flex; flex-direction: column; gap: var(--space-lg); counter-reset: why-step; }
+.why-course-steps li { display: grid; grid-template-columns: 48px 1fr; gap: var(--space-md); align-items: start; }
+.why-step-number { width: 48px; height: 48px; border-radius: var(--radius-full); display: inline-flex; align-items: center; justify-content: center; background: var(--primary); color: var(--white); font-weight: 900; box-shadow: 0 8px 22px rgba(200,146,42,0.28); }
+.why-course-steps h3 { font-size: 1.12rem; margin-bottom: var(--space-xs); }
+.why-course-steps p { margin: 0; }
+.why-outcome-band { margin-top: clamp(32px, 6vw, 56px); padding: clamp(24px, 4vw, 40px); background: var(--primary-light); border-left: 6px solid var(--primary); border-radius: var(--radius-lg); display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-md) var(--space-xl); align-items: center; position: relative; z-index: 1; }
+.why-outcome-band p { margin: 0; font-size: var(--size-lg); color: var(--dark); }
+.why-outcome-band .btn-primary { grid-column: 2; grid-row: 1 / span 2; white-space: normal; text-align: center; justify-content: center; }
 .quote-container { max-width: 780px; }
 .quote-block { font-size: 1.25rem; font-weight: 700; color: var(--dark); line-height: 1.6; margin: var(--space-lg) 0 12px; font-style: italic; }
 .quote-credit { color: var(--muted); font-weight: 600; }
@@ -356,7 +377,7 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
 .teacher-image-frame { border-radius: var(--radius-lg); overflow: hidden; background: transparent; display: flex; align-items: flex-end; justify-content: center; }
 .teacher-image { width: min(100%, 420px); height: auto; object-fit: contain; display: block; }
 .teacher-content { position: relative; overflow: hidden; padding: var(--space-lg); border-radius: var(--radius-lg); }
-.teacher-content::before { content: ''; position: absolute; inset: 0; background: url('assets/PHOTO-2026-05-15-10-08-42-1.png') right bottom / contain no-repeat; opacity: 0.14; pointer-events: none; }
+.teacher-content::before { content: ''; position: absolute; inset: 0; background: url('assets/images/PHOTO-2026-05-15-10-08-42-1.png') right bottom / contain no-repeat; opacity: 0.14; pointer-events: none; }
 .teacher-content > * { position: relative; z-index: 1; }
 .teacher-fallback { padding: 48px; text-align: center; }
 .teacher-fallback-logo { width: 100px; height: 100px; font-size: 2.5rem; margin: 0 auto var(--space-md); }
@@ -386,6 +407,10 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
   .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
   .contact-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
+  .why-course-layout { grid-template-columns: 1fr; }
+  .why-course-copy { max-width: none; }
+  .why-outcome-band { grid-template-columns: 1fr; }
+  .why-outcome-band .btn-primary { grid-column: auto; grid-row: auto; justify-self: start; }
 }
 @media (max-width: 650px) {
   .top-bar-info { line-height: 1.5; }
@@ -404,6 +429,12 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
   .teacher-content { padding: var(--space-md); }
   .teacher-content::before { background-position: center bottom; opacity: 0.1; }
   .hero::after { display: none; }
+  .why-course-section::before { display: none; }
+  .why-course-steps li { grid-template-columns: 40px 1fr; gap: 12px; }
+  .why-step-number { width: 40px; height: 40px; }
+  .why-course-panel { padding: 20px; }
+  .why-course-panel::before { inset: 10px; }
+  .why-outcome-band .btn-primary { width: 100%; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
