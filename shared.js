@@ -254,9 +254,20 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!response.ok) {
           throw new Error('Form submission failed with status ' + response.status);
         }
+        // Ensure the success element is outside the form so hiding the form
+        // doesn't also hide the success message.
+        try {
+          if (successEl && form && successEl.parentNode === form) {
+            form.parentNode.insertBefore(successEl, form.nextSibling);
+          }
+        } catch (err) {
+          console.error('Error moving success element:', err);
+        }
         form.hidden = true;
-        successEl.hidden = false;
-        successEl.focus();
+        if (successEl) {
+          successEl.hidden = false;
+          try { successEl.focus(); } catch (e) { /* focus may fail on non-focusable elements */ }
+        }
       })
       .catch(function (error) {
         console.error('Netlify form submission error:', error);
