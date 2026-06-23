@@ -17,12 +17,12 @@
     <section class="section section-cream" aria-labelledby="booking-form-heading"><div class="container booking-form-container">
       <h2 id="booking-form-heading" class="heading-lg text-center home-heading-tight">Your Lesson Enquiry</h2>
       <p class="body-sm text-center reviews-note">Fields marked <span aria-hidden="true">*</span> are required.</p>
-      <form id="booking-form" name="booking-form" method="post" action="/thank-you.html" aria-label="Lesson Booking Enquiry Form" novalidate data-netlify="true" data-netlify-honeypot="bot-field" class="booking-form-card">
+      <form id="booking-form" name="booking-form" method="post" aria-label="Lesson Booking Enquiry Form" novalidate data-netlify="true" data-netlify-honeypot="bot-field" class="booking-form-card">
         <!-- Netlify form name (helps detection) -->
         <input type="hidden" name="form-name" value="booking-form">
         <!-- Bots will fill this out, humans won't see it -->
         <p style="display:none;">
-          <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+          <label>Don't fill this out if you're human: <input name="bot-field" /></label>
         </p>
         <div class="form-group"><label for="booking-name">Full Name <span aria-hidden="true">*</span></label><input type="text" id="booking-name" name="full_name" class="form-input" placeholder="e.g. Jane Smith" autocomplete="name" aria-required="true" aria-describedby="booking-name-error"><span id="booking-name-error" class="field-error" role="alert" aria-live="polite" hidden></span></div>
         <div class="form-group"><label for="booking-email">Email Address <span aria-hidden="true">*</span></label><input type="email" id="booking-email" name="email" class="form-input" placeholder="e.g. jane@example.com" autocomplete="email" aria-required="true" aria-describedby="booking-email-error"><span id="booking-email-error" class="field-error" role="alert" aria-live="polite" hidden></span></div>
