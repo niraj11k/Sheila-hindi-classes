@@ -21,14 +21,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var navHTML =
     '<header>' +
-    '<div class="top-bar"><div class="container"><span class="top-bar-info">&#128222; <a href="tel:02102697038">021 026 97038</a> &nbsp;&middot;&nbsp; &#9993; <a href="mailto:hindiclass@xtra.co.nz">hindiclass@xtra.co.nz</a> &nbsp;&middot;&nbsp; Private Hindi lessons in Wellington &mdash; by arrangement</span><a href="https://www.facebook.com/share/14bSqWbo5tr/" class="top-bar-facebook" target="_blank" rel="noopener noreferrer"><img src="assets/facebook-icon.png" alt="">Follow us on Facebook</a></div></div>' +
+    '<div class="top-bar"><div class="container"><span class="top-bar-info">&#128222; <a href="tel:02102697038">021 026 97038</a> &nbsp;&middot;&nbsp; &#9993; <a href="mailto:hindiclass@xtra.co.nz">hindiclass@xtra.co.nz</a> &nbsp;&middot;&nbsp; Private Hindi lessons in Wellington &mdash; by arrangement</span><a href="https://www.facebook.com/share/14bSqWbo5tr/" class="top-bar-facebook" target="_blank" rel="noopener noreferrer"><img src="assets/images/facebook-icon.png" alt="">Follow us on Facebook</a></div></div>' +
     '<nav class="navbar" aria-label="Main navigation"><div class="container">' +
-    '<a href="index.html" class="nav-logo" aria-label="Sheila\'s Hindi Classes &mdash; home"><img src="assets/sheila-hindi-class-logo-nb.png" class="logo-image" alt=""><span>Sheila\'s Hindi Classes</span></a>' +
+    '<a href="index.html" class="nav-logo" aria-label="Sheila\'s Hindi Classes &mdash; home"><img src="assets/images/sheila-hindi-class-logo-nb.png" class="logo-image" alt=""><span>Sheila\'s Hindi Classes</span></a>' +
     '<ul class="nav-links" role="list">' + buildNavLinks() + '</ul>' +
     '<div class="nav-cta"><a href="book-a-lesson.html" class="btn-primary">Book a Lesson</a></div>' +
     '<button class="hamburger" id="hamburger-btn" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span></span><span></span><span></span></button>' +
     '</div></nav>' +
-    '<div class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation"><ul role="list">' + buildNavLinks() + '</ul><div class="mobile-nav-actions"><a href="book-a-lesson.html" class="btn-primary mobile-nav-cta">Book a Lesson</a><a href="https://www.facebook.com/share/14bSqWbo5tr/" class="mobile-facebook-link" target="_blank" rel="noopener noreferrer"><img src="assets/facebook-icon.png" alt="">Follow us on Facebook</a></div></div>' +
+    '<div class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation"><ul role="list">' + buildNavLinks() + '</ul><div class="mobile-nav-actions"><a href="book-a-lesson.html" class="btn-primary mobile-nav-cta">Book a Lesson</a><a href="https://www.facebook.com/share/14bSqWbo5tr/" class="mobile-facebook-link" target="_blank" rel="noopener noreferrer"><img src="assets/images/facebook-icon.png" alt="">Follow us on Facebook</a></div></div>' +
     '</header>';
 
   var navPlaceholder = document.getElementById('nav-placeholder');
@@ -37,10 +37,10 @@ document.addEventListener('DOMContentLoaded', function () {
   var footerHTML =
     '<footer class="footer">' +
     '<div class="container"><div class="footer-grid">' +
-    '<div class="footer-col"><div class="footer-logo"><img src="assets/sheila-hindi-class-logo-nb.png" class="logo-image" alt=""><span>Sheila\'s Hindi Classes</span></div><p>Private one-on-one Hindi lessons in Wellington, NZ. Taught by Anuradha Gupta &mdash; passionate educator and lifelong lover of the Hindi language.</p></div>' +
+    '<div class="footer-col"><div class="footer-logo"><img src="assets/images/sheila-hindi-class-logo-nb.png" class="logo-image" alt=""><span>Sheila\'s Hindi Classes</span></div><p>Private one-on-one Hindi lessons in Wellington, NZ. Taught by Anuradha Gupta &mdash; passionate educator and lifelong lover of the Hindi language.</p></div>' +
     '<div class="footer-col"><h4>Quick Links</h4><ul class="footer-links" role="list"><li><a href="index.html">Home</a></li><li><a href="why-learn-hindi.html">Why Learn Hindi?</a></li><li><a href="what-i-offer.html">What I Offer</a></li><li><a href="about-me.html">About Me</a></li></ul></div>' +
     '<div class="footer-col"><h4>More Pages</h4><ul class="footer-links" role="list"><li><a href="faq.html">FAQ</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="book-a-lesson.html">Book a Lesson</a></li><li><a href="contact.html">Contact</a></li></ul></div>' +
-    '<div class="footer-col"><h4>Contact</h4><p><a href="tel:02102697038">&#128222; 021 026 97038</a></p><p><a href="mailto:hindiclass@xtra.co.nz">&#9993; hindiclass@xtra.co.nz</a></p><p><a href="https://www.facebook.com/share/14bSqWbo5tr/" class="footer-facebook-link" target="_blank" rel="noopener noreferrer"><img src="assets/facebook-sm.png" alt="">Facebook</a></p></div>' +
+    '<div class="footer-col"><h4>Contact</h4><p><a href="tel:02102697038">&#128222; 021 026 97038</a></p><p><a href="mailto:hindiclass@xtra.co.nz">&#9993; hindiclass@xtra.co.nz</a></p><p><a href="https://www.facebook.com/share/14bSqWbo5tr/" class="footer-facebook-link" target="_blank" rel="noopener noreferrer"><img src="assets/images/facebook-sm.png" alt="">Facebook</a></p></div>' +
     '</div></div>' +
     '<div class="footer-bottom"><div class="container footer-bottom-content"><p>&copy; 2025 Sheila\'s Hindi Classes. All rights reserved.</p><p>Also visit: <a href="https://sheilasindiankitchen.co.nz/" target="_blank" rel="noopener noreferrer">Sheila\'s Indian Kitchen</a></p></div></div>' +
     '</footer>';
