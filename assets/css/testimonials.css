@@ -1,0 +1,44 @@
+.testimonial {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-copy {
+  margin-bottom: var(--space-sm);
+}
+
+.testimonial-copy.is-collapsed {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+}
+
+.testimonial-toggle {
+  align-self: flex-start;
+  background: transparent;
+  border: 0;
+  color: var(--primary);
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: var(--size-sm);
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 var(--space-md);
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.testimonial-toggle:hover {
+  color: var(--primary-dark);
+}
+
+.testimonial-toggle:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.testimonial-author {
+  margin-top: auto;
+}
