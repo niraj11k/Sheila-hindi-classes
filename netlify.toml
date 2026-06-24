@@ -10,3 +10,13 @@
 
 [build]
   publish = "."
+
+[[redirects]]
+  from = "/"
+  to = "/html/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/:page.html"
+  to = "/html/:page.html"
+  status = 200
