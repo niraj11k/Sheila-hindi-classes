@@ -17,6 +17,16 @@
   status = 200
 
 [[redirects]]
+  from = "/html/index.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/html/:page.html"
+  to = "/:page.html"
+  status = 301
+
+[[redirects]]
   from = "/:page.html"
   to = "/html/:page.html"
   status = 200
